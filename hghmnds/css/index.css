@@ -1,0 +1,120 @@
+/* Import Cascadia Code (only works if the font is installed locally) */
+* {
+    font-family: 'Cascadia Code', monospace !important;
+}
+
+.card-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-wrapper .main-img {
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.card-img-wrapper .hover-img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+}
+
+.card:hover .card-img-wrapper .main-img {
+    opacity: 0;
+}
+
+.card:hover .card-img-wrapper .hover-img {
+    opacity: 1;
+}
+
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 1px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto 0;
+}
+
+.search-bar-form {
+    max-width: 250px;
+    margin-left: auto;
+}
+
+.search-input {
+    height: 38px;
+    font-size: 0.9rem;
+}
+
+.product-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+}
+
+.product-card .card-body {
+    padding: 1rem;
+}
+
+.product-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.product-card .text-primary {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .product-card .carousel-img {
+        height: 200px;
+    }
+}
+/* Promo Banner Layout */
+.promo-banners {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.promo-img {
+    flex: 1 1 33.3333%;
+    width: 33.3333%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 767.98px) {
+    .promo-img {
+        width: 100%;
+    }
+}
+
